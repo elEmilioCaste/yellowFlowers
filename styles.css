@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #D98E73;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  /* Evita scroll cuando caen los íconos */
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#clickable-icon {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.rain {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: -100px;
+  /* Empieza fuera de la pantalla */
+  animation: fall 1.5s linear forwards;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px);
+    /* Inicia arriba de la pantalla */
+  }
+
+  100% {
+    transform: translateY(150vh);
+    /* Termina al fondo de la pantalla */
+  }
+}
+
+#teAmo {
+  position: absolute;
+  top: 35%;
+  text-align: center;
+  font-family: "Satisfy", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 7vh;
+  color: #FFF5E1;
+}
+
+#mucho {
+  position: absolute;
+  top: 40%;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 12vh;
+  color: #FFF5E1;
+}
